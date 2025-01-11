@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Football Manager Profiles</title>
+    <style>
+        /* Previous styles remain the same */
+        :root {
+            --primary-red: #ff3b3b;
+            --primary-orange: #ff8c00;
+            --primary-turquoise: #40e0d0;
+            --primary-sage: #9ba17b;
+            --dark-bg: #1a1a1a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--dark-bg);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        /* Navigation styles */
+        .nav {
+            position: sticky;
+            top: 0;
+            background: rgba(26, 26, 26, 0.95);
+            padding: 1rem;
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 2px solid var(--primary-red);
+        }
+
+        .nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav a {
+            color: var(--primary-turquoise);
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav a:hover {
+            color: var(--primary-orange);
+        }
+
+        /* Main content styles */
+        .main-content {
+            padding: 2rem;
+        }
+
+        .page-title {
+            text-align: center;
+            color: var(--primary-red);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            text-align: center;
+            color: var(--primary-turquoise);
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Rest of the previous styles remain the same */
+        .managers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .manager-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border: 1px solid var(--primary-turquoise);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .manager-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .manager-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-orange);
+            margin-bottom: 1rem;
+        }
+
+        .manager-name {
+            color: var(--primary-orange);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .achievement-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            justify-content: center;
+        }
+
+        .achievement-tag {
+            background-color: var(--primary-turquoise);
+            color: var(--dark-bg);
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+            width: 100%;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+        }
+
+        .stat-icon {
+            color: var(--primary-orange);
+            font-size: 1.2rem;
+        }
+
+        .toilet-bowl {
+            color: var(--primary-red);
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#history">League History</a></li>
+            <li><a href="manager-profile.html">Manager Profiles</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <h1 class="page-title">Fantasy Football Managers</h1>
+        <p class="page-subtitle">Meet Our League's Finest</p>
+
+        <div class="managers-grid">
+            <!-- Manager 1 -->
+            <div class="manager-card">
+                <img src="/api/placeholder/120/120" alt="Manager Avatar" class="manager-avatar">
+                <h2 class="manager-name">Austin Rupert</h2>
+
+                <div class="achievement-tags">
+                    <span class="achievement-tag">2023 Champion</span>
+                    <span class="achievement-tag">Most Points 2022</span>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-icon">🏆</span>
+                        <span>Championships: 2</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">⭐</span>
+                        <span>Playoffs: 4</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">📊</span>
+                        <span>Record: 42-18</span>
+                    </div>
+                    <div class="stat-item toilet-bowl">
+                        <span class="stat-icon">🚽</span>
+                        <span>Toilet Bowls: 0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manager 2 -->
+            <div class="manager-card">
+                <img src="/api/placeholder/120/120" alt="Manager Avatar" class="manager-avatar">
+                <h2 class="manager-name">Juan Lomeli</h2>
+
+                <div class="achievement-tags">
+                    <span class="achievement-tag">2022 Champion</span>
+                    <span class="achievement-tag">Most Trades 2023</span>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-icon">🏆</span>
+                        <span>Championships: 1</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">⭐</span>
+                        <span>Playoffs: 3</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">📊</span>
+                        <span>Record: 38-22</span>
+                    </div>
+                    <div class="stat-item toilet-bowl">
+                        <span class="stat-icon">🚽</span>
+                        <span>Toilet Bowls: 1</span>
+                    </div>
+                </div>
+            </div>
+
+                <!-- Manager 3 -->
+            <div class="manager-card">
+                <img src="/api/placeholder/120/120" alt="Manager Avatar" class="manager-avatar">
+                <h2 class="manager-name">Jeo Bautista</h2>
+
+                <div class="achievement-tags">
+                    <span class="achievement-tag">2022 Champion</span>
+                    <span class="achievement-tag">Most Trades 2023</span>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-icon">🏆</span>
+                        <span>Championships: 1</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">⭐</span>
+                        <span>Playoffs: 3</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">📊</span>
+                        <span>Record: 38-22</span>
+                    </div>
+                    <div class="stat-item toilet-bowl">
+                        <span class="stat-icon">🚽</span>
+                        <span>Toilet Bowls: 1</span>
+                    </div>
+                </div>
+            </div>
+
+                <!-- Manager 4 -->
+            <div class="manager-card">
+                <img src="/api/placeholder/120/120" alt="Manager Avatar" class="manager-avatar">
+                <h2 class="manager-name">Andrew Cipriano</h2>
+
+                <div class="achievement-tags">
+                    <span class="achievement-tag">2022 Champion</span>
+                    <span class="achievement-tag">Most Trades 2023</span>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-icon">🏆</span>
+                        <span>Championships: 1</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">⭐</span>
+                        <span>Playoffs: 3</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">📊</span>
+                        <span>Record: 38-22</span>
+                    </div>
+                    <div class="stat-item toilet-bowl">
+                        <span class="stat-icon">🚽</span>
+                        <span>Toilet Bowls: 1</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+            <div class="managers-grid">
+                <!-- Manager 5 -->
+                <div class="manager-card">
+                    <img src="/api/placeholder/120/120" alt="Manager Avatar" class="manager-avatar">
+                    <h2 class="manager-name">Jean Rodriguez</h2>
+    
+                    <div class="achievement-tags">
+                        <span class="achievement-tag">2023 Champion</span>
+                        <span class="achievement-tag">Most Points 2022</span>
+                    </div>
+    
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-icon">🏆</span>
+                            <span>Championships: 2</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">⭐</span>
+                            <span>Playoffs: 4</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">📊</span>
+                            <span>Record: 42-18</span>
+                        </div>
+                        <div class="stat-item toilet-bowl">
+                            <span class="stat-icon">🚽</span>
+                            <span>Toilet Bowls: 0</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Manager 6 -->
+                <div class="manager-card">
+                    <img src="/api/placeholder/120/120" alt="Manager Avatar" class="manager-avatar">
+                    <h2 class="manager-name">Marco Guerrero</h2>
+    
+                    <div class="achievement-tags">
+                        <span class="achievement-tag">2022 Champion</span>
+                        <span class="achievement-tag">Most Trades 2023</span>
+                    </div>
+    
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-icon">🏆</span>
+                            <span>Championships: 1</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">⭐</span>
+                            <span>Playoffs: 3</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">📊</span>
+                            <span>Record: 38-22</span>
+                        </div>
+                        <div class="stat-item toilet-bowl">
+                            <span class="stat-icon">🚽</span>
+                            <span>Toilet Bowls: 1</span>
+                        </div>
+                    </div>
+                </div>
+    
+                    <!-- Manager 7 -->
+                <div class="manager-card">
+                    <img src="/api/placeholder/120/120" alt="Manager Avatar" class="manager-avatar">
+                    <h2 class="manager-name">Israel Gallegos</h2>
+    
+                    <div class="achievement-tags">
+                        <span class="achievement-tag">2022 Champion</span>
+                        <span class="achievement-tag">Most Trades 2023</span>
+                    </div>
+    
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-icon">🏆</span>
+                            <span>Championships: 1</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">⭐</span>
+                            <span>Playoffs: 3</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">📊</span>
+                            <span>Record: 38-22</span>
+                        </div>
+                        <div class="stat-item toilet-bowl">
+                            <span class="stat-icon">🚽</span>
+                            <span>Toilet Bowls: 1</span>
+                        </div>
+                    </div>
+                </div>
+    
+                    <!-- Manager 8 -->
+                <div class="manager-card">
+                    <img src="/api/placeholder/120/120" alt="Manager Avatar" class="manager-avatar">
+                    <h2 class="manager-name">Roberto Huerado</h2>
+    
+                    <div class="achievement-tags">
+                        <span class="achievement-tag">2022 Champion</span>
+                        <span class="achievement-tag">Most Trades 2023</span>
+                    </div>
+    
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-icon">🏆</span>
+                            <span>Championships: 1</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">⭐</span>
+                            <span>Playoffs: 3</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">📊</span>
+                            <span>Record: 38-22</span>
+                        </div>
+                        <div class="stat-item toilet-bowl">
+                            <span class="stat-icon">🚽</span>
+                            <span>Toilet Bowls: 1</span>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <br>
+        <div class="managers-grid">
+            <!-- Manager 9 -->
+            <div class="manager-card">
+                <img src="/api/placeholder/120/120" alt="Manager Avatar" class="manager-avatar">
+                <h2 class="manager-name">Alavo Lopez</h2>
+
+                <div class="achievement-tags">
+                    <span class="achievement-tag">2023 Champion</span>
+                    <span class="achievement-tag">Most Points 2022</span>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-icon">🏆</span>
+                        <span>Championships: 2</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">⭐</span>
+                        <span>Playoffs: 4</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">📊</span>
+                        <span>Record: 42-18</span>
+                    </div>
+                    <div class="stat-item toilet-bowl">
+                        <span class="stat-icon">🚽</span>
+                        <span>Toilet Bowls: 0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manager 10 -->
+            <div class="manager-card">
+                <img src="/api/placeholder/120/120" alt="Manager Avatar" class="manager-avatar">
+                <h2 class="manager-name">Gabe Medina</h2>
+
+                <div class="achievement-tags">
+                    <span class="achievement-tag">2022 Champion</span>
+                    <span class="achievement-tag">Most Trades 2023</span>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-icon">🏆</span>
+                        <span>Championships: 1</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">⭐</span>
+                        <span>Playoffs: 3</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">📊</span>
+                        <span>Record: 38-22</span>
+                    </div>
+                    <div class="stat-item toilet-bowl">
+                        <span class="stat-icon">🚽</span>
+                        <span>Toilet Bowls: 1</span>
+                    </div>
+                </div>
+            </div>
+
+                <!-- Manager 11 -->
+            <div class="manager-card">
+                <img src="/api/placeholder/120/120" alt="Manager Avatar" class="manager-avatar">
+                <h2 class="manager-name">Ceasar Sanchez</h2>
+
+                <div class="achievement-tags">
+                    <span class="achievement-tag">2022 Champion</span>
+                    <span class="achievement-tag">Most Trades 2023</span>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-icon">🏆</span>
+                        <span>Championships: 1</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">⭐</span>
+                        <span>Playoffs: 3</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">📊</span>
+                        <span>Record: 38-22</span>
+                    </div>
+                    <div class="stat-item toilet-bowl">
+                        <span class="stat-icon">🚽</span>
+                        <span>Toilet Bowls: 1</span>
+                    </div>
+                </div>
+            </div>
+
+                <!-- Manager 12 -->
+            <div class="manager-card">
+                <img src="/api/placeholder/120/120" alt="Manager Avatar" class="manager-avatar">
+                <h2 class="manager-name">Abdiel Valadez</h2>
+
+                <div class="achievement-tags">
+                    <span class="achievement-tag">2022 Champion</span>
+                    <span class="achievement-tag">Most Trades 2023</span>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-icon">🏆</span>
+                        <span>Championships: 1</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">⭐</span>
+                        <span>Playoffs: 3</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">📊</span>
+                        <span>Record: 38-22</span>
+                    </div>
+                    <div class="stat-item toilet-bowl">
+                        <span class="stat-icon">🚽</span>
+                        <span>Toilet Bowls: 1</span>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+</body>
+</html>
