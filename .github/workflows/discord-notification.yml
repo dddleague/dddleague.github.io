@@ -1,0 +1,13 @@
+name: Discord Notification
+on: [push]
+jobs:
+  notification:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Discord Notification
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        uses: Ilshidur/action-discord@master
+        with:
+          args: 'A new commit has been pushed: {{ EVENT_PAYLOAD.head_commit.message }}.'
