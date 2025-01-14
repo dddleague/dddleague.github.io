@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Football League History</title>
+    <link rel="icon" href="/assets/ddd.ico">
+    <style>
+        :root {
+            --primary-red: #ff3b3b;
+            --primary-orange: #ff8c00;
+            --primary-turquoise: #40e0d0;
+            --primary-sage: #9ba17b;
+            --dark-bg: #1a1a1a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--dark-bg);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .nav {
+            position: sticky;
+            top: 0;
+            background: rgba(26, 26, 26, 0.95);
+            padding: 1rem;
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 2px solid var(--primary-red);
+        }
+
+        .nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav a {
+            color: var(--primary-turquoise);
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav a:hover {
+            color: var(--primary-orange);
+        }
+
+        .main-content {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .page-title {
+            text-align: center;
+            color: var(--primary-red);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            text-align: center;
+            color: var(--primary-turquoise);
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+        }
+
+        .season-section {
+            margin-bottom: 4rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid var(--primary-turquoise);
+        }
+
+        .season-header {
+            color: var(--primary-orange);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .season-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .winner-info {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .winner-title {
+            color: var(--primary-turquoise);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .winner-name {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .winner-details {
+            color: var(--primary-sage);
+        }
+
+        .season-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .season-image {
+            width: 100%;
+            border-radius: 10px;
+            border: 2px solid var(--primary-turquoise);
+            transition: transform 0.3s;
+        }
+
+        .season-image:hover {
+            transform: scale(1.02);
+        }
+
+        @media (max-width: 768px) {
+            .season-info,
+            .season-images {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="league-history.html">League History</a></li>
+            <li><a href="manager-profile.html">Manager Profiles</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <h1 class="page-title">League History</h1>
+        <p class="page-subtitle">Chronicles of Glory and Defeat</p>
+
+        <!-- 2024 Season -->
+        <div class="season-section">
+            <h2 class="season-header">2024 Season</h2>
+            <div class="season-info">
+                <div class="winner-info">
+                    <h3 class="winner-title">League Champion</h3>
+                    <p class="winner-name">Israel Gallegos</p>
+                    <p class="winner-details">Final Record: 19-20-1</p>
+                </div>
+                <div class="winner-info">
+                    <h3 class="winner-title">Toilet Bowl Winner</h3>
+                    <p class="winner-name">Alvaro Lopez</p>
+                    <p class="winner-details">Final Record: 15-25</p>
+                </div>
+            </div>
+            <div class="season-images">
+                <img src="/assets/2024-bracket.jpg" alt="2024 Playoff Bracket" class="season-image">
+                <img src="/assets/2024-standings.jpg" alt="2024 Final Standings" class="season-image">
+            </div>
+        </div>
+
+        <!-- 2023 Season -->
+        <div class="season-section">
+            <h2 class="season-header">2023 Season</h2>
+            <div class="season-info">
+                <div class="winner-info">
+                    <h3 class="winner-title">League Champion</h3>
+                    <p class="winner-name">Cesar Sanchez</p>
+                    <p class="winner-details">Final Record: 14-25-1</p>
+                </div>
+                <div class="winner-info">
+                    <h3 class="winner-title">Toilet Bowl Winner</h3>
+                    <p class="winner-name">Israel Gallegos</p>
+                    <p class="winner-details">Final Record: 19-20-1</p>
+                </div>
+            </div>
+            <div class="season-images">
+                <img src="/assets/2023-bracket.jpg" alt="2023 Playoff Bracket" class="season-image">
+                <img src="/assets/2023-standings.jpg" alt="2023 Final Standings" class="season-image">
+            </div>
+        </div>
+
+        <!-- 2022 Season -->
+        <div class="season-section">
+            <h2 class="season-header">2022 Season</h2>
+            <div class="season-info">
+                <div class="winner-info">
+                    <h3 class="winner-title">League Champion</h3>
+                    <p class="winner-name">Gabe Medina</p>
+                    <p class="winner-details">Final Record: 22-18</p>
+                </div>
+                <div class="winner-info">
+                    <h3 class="winner-title">Toilet Bowl Winner</h3>
+                    <p class="winner-name">Andrew Cipriano</p>
+                    <p class="winner-details">Final Record: 6-8</p>
+                </div>
+            </div>
+            <div class="season-images">
+                <img src="/assets/2022-bracket.png" alt="2022 Playoff Bracket" class="season-image">
+                <img src="/assets/2022-standings.jpg" alt="2022 Final Standings" class="season-image">
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
