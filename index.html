@@ -119,55 +119,6 @@
             transform: translateY(-5px);
         }
 
-        /* Team Profiles */
-        .teams {
-            padding: 4rem 2rem;
-        }
-
-        .teams h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            color: var(--primary-orange);
-            margin-bottom: 2rem;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .team-card {
-            position: relative;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
-            overflow: hidden;
-            aspect-ratio: 1;
-        }
-
-        .team-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .team-info {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(26, 26, 26, 0.9);
-            padding: 1rem;
-            transform: translateY(70%);
-            transition: transform 0.3s;
-        }
-
-        .team-card:hover .team-info {
-            transform: translateY(0);
-        }
-
         /* Footer */
         .footer {
             background: var(--dark-bg);
@@ -223,64 +174,167 @@
         <h2>League History</h2>
         <div class="champions-grid">
             <div class="champion-card">
-                <h3>2023 Champion</h3>
-                <p>Texas Tornadoes</p>
-                <p>Season Record: 12-2</p>
-                <p>"Dominated the season with record-breaking performances"</p>
+                <h3>2024 Champion</h3>
+                <p>Israel Gallegos</p>
+                <p>Season Record: 19-20-1</p>
+                <p>"Israel of Bethlehem conquered the league with a 19-20-1 record"</p>
             </div>
             <div class="champion-card">
-                <h3>2022 Champion</h3>
-                <p>Dallas Dragons</p>
-                <p>Season Record: 11-3</p>
+                <h3>2023 Champion</h3>
+                <p>Cesar Sanchez</p>
+                <p>Season Record: 14-25-1</p>
                 <p>"A comeback story for the ages"</p>
             </div>
             <div class="champion-card">
-                <h3>2021 Champion</h3>
-                <p>Houston Heroes</p>
-                <p>Season Record: 10-4</p>
-                <p>"First-time champions with a rookie sensation"</p>
+                <h3>2022 Champion</h3>
+                <p>Gabe Medina</p>
+                <p>Season Record: 15-25</p>
+                <p>"A comeback story for the ages"</p>
             </div>
         </div>
     </section>
 
-    <section id="teams" class="teams">
-        <h2>Team Profiles</h2>
-        <div class="team-grid">
-            <div class="team-card">
-                <img src="/placeholder.svg?height=300&width=300" alt="Texas Tornadoes Team">
-                <div class="team-info">
-                    <h3>Texas Tornadoes</h3>
-                    <p>Current Champion</p>
-                    <p>Championships: 2</p>
-                    <p>"Known for aggressive offense and clutch performances"</p>
+    <section id="league-info" class="league-info">
+        <h2>League Information</h2>
+        <div class="info-container">
+            <div class="info-card primary">
+                <div class="info-icon">🏈</div>
+                <h3>League Basics</h3>
+                <ul>
+                    <li>Founded: 2022</li>
+                    <li>Commissioner: Austin Rupert</li>
+                    <li>League Size: 12 Teams</li>
+                    <li>Format: Full PPR</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">📅</div>
+                <h3>Important Dates</h3>
+                <div class="date-item">
+                    <span class="date-label">2024 Draft Day:</span>
+                    <span class="date-value">TBD</span>
+                </div>
+                <div class="date-item">
+                    <span class="date-label">Season Start:</span>
+                    <span class="date-value">September 2024</span>
                 </div>
             </div>
-            <div class="team-card">
-                <img src="/placeholder.svg?height=300&width=300" alt="Dallas Dragons Team">
-                <div class="team-info">
-                    <h3>Dallas Dragons</h3>
-                    <p>2022 Champion</p>
-                    <p>Championships: 1</p>
-                    <p>"Masters of the fourth-quarter comeback"</p>
-                </div>
+
+            <div class="info-card">
+                <div class="info-icon">📋</div>
+                <h3>League Settings</h3>
+                <ul>
+                    <li>Playoff Teams: 6</li>
+                    <li>Trade Deadline: Week 12</li>
+                    <li>Waiver Type: FAAB</li>
+                    <li>Weekly Matchups</li>
+                </ul>
             </div>
-            <div class="team-card">
-                <img src="/placeholder.svg?height=300&width=300" alt="Houston Heroes Team">
-                <div class="team-info">
-                    <h3>Houston Heroes</h3>
-                    <p>2021 Champion</p>
-                    <p>Championships: 1</p>
-                    <p>"Rising stars with a bright future"</p>
-                </div>
+
+            <div class="info-card">
+                <div class="info-icon">🏆</div>
+                <h3>Scoring Highlights</h3>
+                <ul>
+                    <li>Passing TD: 4 pts</li>
+                    <li>Rushing/Receiving TD: 6 pts</li>
+                    <li>PPR: 1 point</li>
+                    <li>Bonuses for 40+ yd plays</li>
+                </ul>
             </div>
         </div>
+
+        <style>
+            .league-info {
+                padding: 4rem 6rem;
+                background: rgba(255, 255, 255, 0.05);
+                border-radius: 20px;
+                margin: 2rem auto;
+                max-width: 1400px;
+            }
+
+            .info-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 2rem;
+                margin-top: 2rem;
+            }
+
+            .info-card {
+                background: rgba(64, 224, 208, 0.1);
+                border-radius: 15px;
+                padding: 2rem;
+                transition: transform 0.3s ease;
+                border: 1px solid var(--primary-turquoise);
+            }
+
+            .info-card:hover {
+                transform: translateY(-5px);
+            }
+
+            .info-card.primary {
+                background: linear-gradient(145deg, rgba(255, 59, 59, 0.1), rgba(64, 224, 208, 0.1));
+                border: 1px solid var(--primary-red);
+            }
+
+            .info-icon {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+                text-align: center;
+            }
+
+            .info-card h3 {
+                color: var(--primary-turquoise);
+                margin-bottom: 1rem;
+                text-align: center;
+                font-size: 1.3rem;
+            }
+
+            .info-card ul {
+                list-style: none;
+                padding: 0;
+            }
+
+            .info-card ul li {
+                margin-bottom: 0.5rem;
+                padding-left: 1rem;
+                position: relative;
+            }
+
+            .info-card ul li:before {
+                content: "•";
+                color: var(--primary-orange);
+                position: absolute;
+                left: 0;
+            }
+
+            .date-item {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 0.5rem;
+            }
+
+            .date-label {
+                color: var(--primary-orange);
+            }
+
+            @media (max-width: 768px) {
+                .league-info {
+                    padding: 4rem 2rem;
+                }
+                
+                .info-container {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
     </section>
 
     <footer class="footer">
-        <p>&copy; 2024 Triple D League. All rights reserved.</p>
+        <p>&copy; 2025 Triple D League. All rights reserved.</p>
         <p>
-            <a href="https://github.com/yourusername/triple-d-league" target="_blank" rel="noopener noreferrer">
-                View on GitHub
+            <a href="https://instagram.com/dddleague" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram"></i> Follow us on Instagram
             </a>
         </p>
     </footer>
