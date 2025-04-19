@@ -176,19 +176,19 @@
             <div class="champion-card">
                 <h3>2024 Champion</h3>
                 <p>Israel Gallegos</p>
-                <p>Season Record: 19-20-1</p>
+                <p>Season Record: 9-4-1</p>
                 <p>"Israel of Bethlehem conquered the league with a 19-20-1 record"</p>
             </div>
             <div class="champion-card">
                 <h3>2023 Champion</h3>
                 <p>Cesar Sanchez</p>
-                <p>Season Record: 14-25-1</p>
+                <p>Season Record: 7-6</p>
                 <p>"A comeback story for the ages"</p>
             </div>
             <div class="champion-card">
                 <h3>2022 Champion</h3>
                 <p>Gabe Medina</p>
-                <p>Season Record: 15-25</p>
+                <p>Season Record: 9-4</p>
                 <p>"A comeback story for the ages"</p>
             </div>
         </div>
@@ -212,12 +212,12 @@
                 <div class="info-icon">📅</div>
                 <h3>Important Dates</h3>
                 <div class="date-item">
-                    <span class="date-label">2024 Draft Day:</span>
-                    <span class="date-value">TBD</span>
+                    <span class="date-label">2025 Draft Day:</span><br>
+                    <span class="date-value">August 26th, 2025</span>
                 </div>
                 <div class="date-item">
-                    <span class="date-label">Season Start:</span>
-                    <span class="date-value">September 2024</span>
+                    <span class="date-label">Season Start:</span><br>
+                    <span class="date-value">September 5th, 2025</span>
                 </div>
             </div>
 
@@ -227,7 +227,7 @@
                 <ul>
                     <li>Playoff Teams: 6</li>
                     <li>Trade Deadline: Week 12</li>
-                    <li>Waiver Type: FAAB</li>
+                    <li>Waiver Type: Move to Last, After Claim</li>
                     <li>Weekly Matchups</li>
                 </ul>
             </div>
@@ -273,8 +273,8 @@
             }
 
             .info-card.primary {
-                background: linear-gradient(145deg, rgba(255, 59, 59, 0.1), rgba(64, 224, 208, 0.1));
-                border: 1px solid var(--primary-red);
+                background: rgba(64, 224, 208, 0.1);
+                border: 1px solid var(--primary-turquoise);
             }
 
             .info-icon {
@@ -293,12 +293,21 @@
             .info-card ul {
                 list-style: none;
                 padding: 0;
+                margin-top: 1.2rem;
+                margin-bottom: 0;
+                width: 100%;
+                word-break: break-word;
             }
 
             .info-card ul li {
-                margin-bottom: 0.5rem;
-                padding-left: 1rem;
+                margin-bottom: 0.4rem;
+                padding-left: 1.3rem;
                 position: relative;
+                white-space: normal;
+                font-size: 1rem;
+                line-height: 1.45;
+                max-width: 100%;
+                overflow-wrap: break-word;
             }
 
             .info-card ul li:before {
@@ -306,16 +315,30 @@
                 color: var(--primary-orange);
                 position: absolute;
                 left: 0;
+                top: 0.1em;
+                font-size: 1.1em;
             }
 
             .date-item {
-                display: flex;
-                justify-content: space-between;
-                margin-bottom: 0.5rem;
+                display: block;
+                margin-bottom: 0.8rem;
+                white-space: normal;
+                font-size: 1rem;
+                line-height: 1.45;
+                width: 100%;
+                overflow-wrap: break-word;
             }
 
             .date-label {
                 color: var(--primary-orange);
+                margin-right: 0.3rem;
+            }
+
+            .date-item:first-child .date-label {
+                min-width: 120px;
+            }
+            .date-item:first-child .date-value {
+                margin-left: 0.5rem;
             }
 
             @media (max-width: 768px) {
